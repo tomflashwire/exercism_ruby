@@ -5,10 +5,7 @@ class Anagram
   end
 
   def match(words)
-    result = []
-    words.select do |word|
-      (is_anagram(@word.downcase, word.downcase)) ? result << word : nil
-    end
+    words.select { |word| is_anagram(@word.downcase, word.downcase) }
   end
 
   def is_anagram(word1, word2)
